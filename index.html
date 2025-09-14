@@ -36,36 +36,32 @@
   width: 100%;
   display: flex;
   justify-content: center; 
-  margin-bottom: 0;  /* reduced space */
+  margin-bottom: 0.2rem;  /* very small space */
 }
 
 .photo-background {
   background-color: #fffbea; 
-  padding: 0.2rem;  /* reduced padding to minimize blank space */
-  border-radius: 4px; /* smaller rounding */
-  display: flex;         
-  justify-content: center; 
+  padding: 0.1rem;  /* minimal padding */
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
 }
 
 .photo-background img {
-  width: 60%;        /* image size */
-  max-width: 300px;  /* ensures it fits screen */
+  width: 55%;      /* slightly smaller */
+  max-width: 250px;
   height: auto;
-  display: block;
-  border-radius: 4px; /* subtle rounding */
+  border-radius: 4px;
 }
 
-
-
-    /* Main Section */
-    main {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* align to top of main */
+  text-align: center;
+  padding: 1rem 1rem;      /* reduce padding */
+  flex: unset;             /* remove flex:1 to prevent pushing content down */
+}
 
     .language-selector {
       background: rgba(255,255,240,0.9);
