@@ -36,22 +36,23 @@
   width: 100%;
   display: flex;
   justify-content: center; 
-  margin-bottom: 0.2rem;  /* very small space */
+  margin-bottom: 0.0rem;  /* minimal space below image */
 }
 
 .photo-background {
   background-color: #fffbea; 
-  padding: 0.1rem;  /* minimal padding */
-  border-radius: 4px;
+  padding: 0.05rem;  /* minimal padding around image */
+  border-radius: 2px; /* very subtle rounding */
   display: flex;
   justify-content: center;
 }
 
 .photo-background img {
-  width: 55%;      /* slightly smaller */
-  max-width: 250px;
+  width: 45%;       /* adjust as needed */
+  max-width: 250px; /* ensures it fits screen */
   height: auto;
-  border-radius: 4px;
+  display: block;
+  border-radius: 2px; /* match container rounding */
 }
 
 main {
