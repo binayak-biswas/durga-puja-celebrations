@@ -112,8 +112,6 @@
       text-align: center;
     }
 
-
-
     /* About */
     #about .about-wrapper {
       display: flex;
@@ -134,21 +132,19 @@
       text-align: center;
     }
     .devotional-chant {
-  margin-top: 1rem;
-  text-align: center;
-  font-weight: bold;
-  color: #1A1F71; /* Visa Blue text */
-  font-size: 1.0rem;
-  letter-spacing: 1px;
-  animation: chant-glow 2s infinite;
-}
-
-@keyframes chant-glow {
-  0%   { text-shadow: 0 0 5px #00BFFF; }   /* cyan glow */
-  50%  { text-shadow: 0 0 15px #1E90FF; }  /* brighter sky blue glow */
-  100% { text-shadow: 0 0 5px #00BFFF; }
-}
-
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: bold;
+      color: #1A1F71; /* Visa Blue text */
+      font-size: 1.0rem;
+      letter-spacing: 1px;
+      animation: chant-glow 2s infinite;
+    }
+    @keyframes chant-glow {
+      0%   { text-shadow: 0 0 5px #00BFFF; }   /* cyan glow */
+      50%  { text-shadow: 0 0 15px #1E90FF; }  /* brighter sky blue glow */
+      100% { text-shadow: 0 0 5px #00BFFF; }
+    }
 
     /* Contact */
     .contact p {
@@ -175,12 +171,12 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
-/* Distinctive individual borders */
-.contact-tile:nth-child(1) { border: 2px solid #b22222; } /* Maroon/Red */
-.contact-tile:nth-child(2) { border: 2px solid #228b22; } /* Forest Green */
-.contact-tile:nth-child(3) { border: 2px solid #ff8c00; } /* Deep Orange */
-.contact-tile:nth-child(4) { border: 2px solid #1e90ff; } /* Bright Blue */
-
+    /* Distinctive individual borders */
+    .contact-tile:nth-child(1) { border: 2px solid #b22222; } /* Maroon/Red */
+    .contact-tile:nth-child(2) { border: 2px solid #228b22; } /* Forest Green */
+    .contact-tile:nth-child(3) { border: 2px solid #ff8c00; } /* Deep Orange */
+    .contact-tile:nth-child(4) { border: 2px solid #1e90ff; } /* Bright Blue */
+    .contact-tile:nth-child(5) { border: 2px solid #8b008b; } /* Dark Magenta */
 
     .contact-tile h3 {
       font-size: 1.1rem;
@@ -217,11 +213,21 @@
       align-items: center;
       gap: 0.3rem; /* space between icon and number */
     }
-.contact-tile .phone span {
-  display: inline-block;
-}
+    .contact-tile .phone span {
+      display: inline-block;
+    }
 
-footer {
+    /* Mobile fix: center last odd tile */
+    @media (max-width: 768px) {
+      .contact-tiles {
+        justify-content: center;
+      }
+      .contact-tiles .contact-tile:last-child:nth-child(odd) {
+        grid-column: span 2;
+        justify-self: center;
+      }
+    }
+    footer {
       background: #555;
       color: white;
       text-align: center;
@@ -231,7 +237,6 @@ footer {
       margin-top: 2rem;
       margin-bottom: 3rem; /* ensures it's not hidden behind nav */
     }
-
   </style>
 </head>
 <body>
