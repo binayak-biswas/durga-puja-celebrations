@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>পিপিসি দুর্গাপূজা ২০২৫ – অনুষ্ঠানসূচী (বাংলা)</title>
+  <style>
+    /* Reset & Base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffbea;
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><text x='10' y='40' font-size='28'>🪔</text><text x='60' y='90' font-size='28'>🥁</text></svg>");
+      background-size: 140px 140px;
+      background-repeat: repeat;
+      color: #4b2e1e;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      font-family: 'Trebuchet MS', sans-serif;
+      color: #5c3317;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #fff3b0, #ffd166);
+      color: #5c3d2e;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-bottom: 5px solid #d2691e;
+    }
+    header h1 { font-size: 1.8rem; }
+    header p { font-size: 1rem; margin-top: 0.3rem; }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(135deg, #fff3b0, #ffd166);
+      color: #5c3d2e;
+      display: flex;
+      justify-content: space-around;
+      padding: 0.5rem 0;
+      z-index: 1000;
+      border-top: 3px solid #b5651d;
+    }
+    nav a {
+      color: #4b2e1e;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    /* Sections */
+    section {
+      padding: 1.5rem 1rem;
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255,255,240,0.9);
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    section h2 {
+      margin-bottom: 1rem;
+      text-align: center;
+      border-bottom: 2px solid #d2691e;
+      display: inline-block;
+      padding-bottom: 0.2rem;
+    }
+
+    /* Schedule */
+    .day {
+      background: #fffdf3;
+      border: 2px solid #d4af37; /* gold border */
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .day h3 {
+      color: #5c3317;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .day ul { margin-left: 1rem; }
+    .day li { margin-bottom: 0.4rem; }
+    
+    .special-note {
+      background: #fffdf3;
+      border: 2px solid #d4af37; /* gold border */
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .special-note h3 {
+      color: #800000; /* purple heading */
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .special-note p {
+      color: #4b0082; /* indigo purple for body */
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0;
+      text-align: center;
+    }
+
+
+
+    /* About */
+    #about .about-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    #about img {
+      width: 70px;
+      height: auto;
+      opacity: 0.95;
+      border-radius: 8px;
+      border: 2px solid #d2691e;
+    }
+    #about p {
+      flex: 1;
+      text-align: center;
+    }
+    .devotional-chant {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  color: #1A1F71; /* Visa Blue text */
+  font-size: 1.0rem;
+  letter-spacing: 1px;
+  animation: chant-glow 2s infinite;
+}
+
+@keyframes chant-glow {
+  0%   { text-shadow: 0 0 5px #00BFFF; }   /* cyan glow */
+  50%  { text-shadow: 0 0 15px #1E90FF; }  /* brighter sky blue glow */
+  100% { text-shadow: 0 0 5px #00BFFF; }
+}
+
+
+    /* Contact */
+    .contact p {
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .contact-tiles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .contact-tile {
+      background: #fffdf3;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .contact-tile:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+/* Distinctive individual borders */
+.contact-tile:nth-child(1) { border: 2px solid #b22222; } /* Maroon/Red */
+.contact-tile:nth-child(2) { border: 2px solid #228b22; } /* Forest Green */
+.contact-tile:nth-child(3) { border: 2px solid #ff8c00; } /* Deep Orange */
+.contact-tile:nth-child(4) { border: 2px solid #1e90ff; } /* Bright Blue */
+
+
+    .contact-tile h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+      color: #5c3317;
+      font-weight: bold;
+    }
+    .contact-tile .icon {
+      font-size: 1.2rem;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      background: #f5f5f5;
+      border-radius: 50%;
+      padding: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .contact-tile .name {
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: #333;
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+      margin-bottom: 0.3rem;
+      text-align: center;
+    }
+    .contact-tile .phone {
+      font-size: 0.9rem;
+      color: #555;
+      white-space: nowrap;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.3rem; /* space between icon and number */
+    }
+.contact-tile .phone span {
+  display: inline-block;
+}
+
+footer {
+      background: #555;
+      color: white;
+      text-align: center;
+      padding: 0.75rem;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      margin-top: 2rem;
+      margin-bottom: 3rem; /* ensures it's not hidden behind nav */
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>সর্বজনীন দুর্গা পূজা উদযাপন ২০২৫</h1>
+    <p>প্রথম পল্লী ক্লাব দুর্গাপূজা কমিটির আয়োজনে</p>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>আমাদের সম্পর্কে</h2>
+    <div class="about-wrapper">
+      <img src="dhaki.png" alt="Dhaki playing Dhak">
+      <p>
+        🌸 “প্রথম পল্লীতে, দুর্গাপূজা কেবল একটি উৎসব নয় — এটি আকাশে ভেসে থাকা ভক্তির সুগন্ধ, ধাকের ছন্দ যা প্রতিটি হৃদয়কে জাগায়, এবং অগণিত প্রার্থনাকে আলোকিত করা প্রদীপের দীপ্তি। প্রতিটি ভোগ, প্রতিটি হাসি, প্রতিটি মুহূর্ত হয়ে ওঠে একটি সুতার মতো যা আমাদের সকলকে মা দুর্গার আলিঙ্গনে একত্রিত করে। ভালোবাসা ও শ্রদ্ধার সঙ্গে, আমরা প্রতিটি ভক্তকে এই পবিত্র উৎসবের অংশ হতে স্বাগত জানাই — আনন্দ করতে, প্রার্থনা করতে, এবং এমন স্মৃতি তৈরি করতে যা চিরকাল আমাদের হৃদয়ে বেঁচে থাকবে।” 🌸
+      </p>
+    </div>
+    <p class="devotional-chant">🙏 বলো বলো দুর্গা মাইকি জয় 🙏</p>
+  </section>
+  
+
+ <!-- Schedule -->
+ <section id="schedule">
+  <h2>পূজা অনুষ্ঠানসূচী</h2>
+  <div class="day">
+    <h3>মহাপঞ্চমী - ২৭/০৯/২০২৫ - শনিবার</h3>
+    <ul>
+      <li><b>সন্ধ্যা ৬:৩০</b> – উদ্বোধনী গান</li>
+      <li><b>সন্ধ্যা ৭:০০</b> – পূজা প্যান্ডেলের উদ্বোধন করবেন স্বামী গণাধীশানন্দজি মহারাজ, সম্পাদক, রামকৃষ্ণ মিশন, শিলচর</li>
+      <li><b>সন্ধ্যা ৭:৩০ থেকে</b> – সাংস্কৃতিক অনুষ্ঠান</li>
+    </ul>
+  </div>
+  <div class="day">
+    <h3>মহাষষ্ঠী - ২৮/০৯/২০২৫ - রবিবার</h3>
+    <ul>
+      <li><b>সন্ধ্যা ৭:০০</b> – ষষ্ঠী পূজা</li>
+      <li><b>সন্ধ্যা ৭:০০ থেকে</b> – সাংস্কৃতিক অনুষ্ঠান</li>
+    </ul>
+  </div>
+  <div class="day">
+    <h3>মহাসপ্তমী - ২৯/০৯/২০২৫ - সোমবার</h3>
+    <ul>
+      <li><b>সকাল ৭:৩০</b> – সপ্তমী পূজা</li>
+      <li><b>সকাল ১০:৩০</b> – অঞ্জলি</li>
+      <li><b>সকাল ১১:৪৫</b> – ভোগ</li>
+      <li><b>সন্ধ্যা ৭:৩০</b> – সন্ধ্যা আরতি</li>
+      <li><b>সন্ধ্যা ৭:০০ থেকে</b> – সাংস্কৃতিক অনুষ্ঠান</li>
+    </ul>
+  </div>
+  <div class="day">
+    <h3>মহাষ্ঠমী - ৩০/০৯/২০২৫ - মঙ্গলবার</h3>
+    <ul>
+      <li><b>সকাল ৭:৩০</b> – অষ্টমী পূজা</li>
+      <li><b>সকাল ১০:৩০</b> – অঞ্জলি</li>
+      <li><b>সকাল ১১:৪৫</b> – ভোগ</li>
+      <li><b>দুপুর ১:২৩ থেকে ২:০৯</b> – সন্ধি পূজা</li>
+      <li><b>সন্ধ্যা ৭:০০</b> – সন্ধ্যা আরতি</li>
+      <li><b>রাত ৮:০০</b> – কালী পূজা</li>
+      <li><b>সন্ধ্যা ৭:০০ থেকে</b> – সাংস্কৃতিক অনুষ্ঠান</li>
+    </ul>
+  </div>
+  <div class="day">
+    <h3>মহা নবরাত্রী নবমী - ০১/১০/২০২৫ - বুধবার</h3>
+    <ul>
+      <li><b>সকাল ৭:৩০</b> – নবমী পূজা</li>
+      <li><b>সকাল ১০:৩০</b> – অঞ্জলি</li>
+      <li><b>11:45 AM</b> – Bhog</li>
+      <li><b>07:30 PM</b> – Sandhya Arati</li>
+      <li><b>সন্ধ্যা ৭:০০ থেকে</b> – সাংস্কৃতিক অনুষ্ঠান</li>
+    </ul>
+  </div>
+  <div class="day">
+    <h3>মহা দশমী - ০২/১০/২০২৫ - বৃহস্পতিবার</h3>
+    <ul>
+      <li><b>সকাল ৭:৩০</b> – দশমী পূজা</li>
+      <li><b>সন্ধ্যা ৬:৩০</b> – শান্তি বাড়ি এবং অপরাজিতা ধারণ</li>
+    </ul>
+  </div>
+  <div class="special-note">
+    <h3>দ্রষ্টব্য</h3>
+    <ul>
+    <p>মহা সপ্তমী, মহা অষ্টমী এবং মহা নবমীতে দুপুর <b>১:৩০</b> থেকে মহাপ্রসাদ বিতরণ করা হবে</p>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <h2>যোগাযোগ করুন</h2>
+  <p><b>অবস্থান:</b> প্রথম পল্লী ক্লাব দুর্গাপূজা কমিটি</p>
+    <p>তারাপুর, শিলচর, কচর, অসম - ৭৮৮০০৩</p>
+  <div class="contact-tiles">
+    <div class="contact-tile">
+      <span class="icon">👤</span>
+      <h3>সভাপতি</h3>
+      <p class="name">গোপেন্দু চৌধুরি (গোপু)</p>
+      <p class="phone"><span>📞</span> +৯১-৯৪৩৫০৭১৬৪৭</p>
+    </div>
+    <div class="contact-tile">
+      <span class="icon">👤</span>
+      <h3>সাধারণ সম্পাদক</h3>
+      <p class="name">বিভাষ রঞ্জন বিশ্বাস (বিভু)</p>
+      <p class="phone"><span>📞</span> +৯১-৯৪৩৬০৪০৪৪৬</p>
+    </div>
+    <div class="contact-tile">
+      <span class="icon">👤</span>
+      <h3>সহ-সচিব</h3>
+      <p class="name">সুজিত দেব</p>
+      <p class="phone"><span>📞</span> +৯১-৮৬৩৮৪৯১২৩৫</p>
+    </div>
+    <div class="contact-tile">
+      <span class="icon">👤</span>
+      <h3>"সহ-সচিব (সাংস্কৃতিক)</h3>
+      <p class="name">রাজিব নাথ (রাজু)</p>
+      <p class="phone"><span>📞</span> +৯১-৯৪৩৫০৭৩৬৮১</p>
+    </div>
+    <div class="contact-tile">
+      <span class="icon">👤</span>
+      <h3>কোষাধ্যক্ষ</h3>
+      <p class="name">সৌমিত্র নাথ (দুলু)</p>
+      <p class="phone"><span>📞</span> +৯১-৯৪৩৫৩৭৪৩২৪</p>
+    </div>
+  </div>
+</section>
+
+<!-- Proper Footer -->
+<footer>
+  উন্নত করেছেন বিনায়ক বিশ্বাস
+</footer>
+
+<!-- Navigation -->
+<nav>
+  <a href="#about">সম্পর্কে</a>
+  <a href="#schedule">অনুষ্ঠানসূচী</a>
+  <a href="#contact">যোগাযোগ</a>
+</nav>
+</body>
+</html>
